@@ -1,4 +1,7 @@
 #!/bin/sh
+
+set -x 
+
 # Note that in this case the build inputs are part of the custom builder image, but normally this
 # is retrieved from an external source.
 # cd /tmp/input
@@ -6,6 +9,8 @@
 # build framework
 TAG="${OUTPUT_REGISTRY}/${OUTPUT_IMAGE}"
 
+pwd
+ls -la
 
 # performs the build of the new image defined by dockerfile.sample
 buildah --storage-driver vfs bud --isolation chroot -t ${TAG} .
