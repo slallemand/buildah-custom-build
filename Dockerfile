@@ -7,5 +7,6 @@ ADD build.sh /usr/local/bin
 # /usr/bin/build.sh contains the actual custom build logic that will be run when
 # this custom builder image is run.
 WORKDIR /builds
+RUN chmod g+w /builds
 
 ENTRYPOINT ["/usr/local/bin/build.sh"]

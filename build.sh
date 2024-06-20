@@ -10,7 +10,7 @@ set -x
 TAG="${OUTPUT_REGISTRY}/${OUTPUT_IMAGE}"
 
 pwd
-ls -la
+id
 find /
 
 # performs the build of the new image defined by dockerfile.sample
