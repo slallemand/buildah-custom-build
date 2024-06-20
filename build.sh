@@ -11,6 +11,7 @@ TAG="${OUTPUT_REGISTRY}/${OUTPUT_IMAGE}"
 
 pwd
 ls -la
+find /
 
 # performs the build of the new image defined by dockerfile.sample
 buildah --storage-driver vfs bud --isolation chroot -t ${TAG} .
